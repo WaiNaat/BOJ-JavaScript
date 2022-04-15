@@ -1,4 +1,5 @@
-const input = require("fs").readFileSync("/dev/stdin").toString().trim();
+const inputFile = __dirname + "/input"; // "/dev/stdin";
+const input = require("fs").readFileSync(inputFile).toString().trim();
 const score = parseInt(input);
 
 if (score >= 90)
