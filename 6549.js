@@ -46,21 +46,15 @@ function calculate_largest_area(histogram, left, right)
 
         // 왼쪽을 먹을까?
         if (left <= left_horizon - 1)
-        {
             eat_left = Math.min(height, histogram[left_horizon - 1]) * (width + 1);
-        }
 
         // 오른쪽을 먹을까?
         if (right_horizon + 1 < right)
-        {
             eat_right = Math.min(height, histogram[right_horizon + 1]) * (width + 1);
-        }
 
         // 결정
         if (eat_left === 0 && eat_right === 0)
-        {
             break;
-        }
         else if (eat_left > eat_right)
         {
             left_horizon--;
