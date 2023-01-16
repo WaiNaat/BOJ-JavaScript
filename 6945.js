@@ -88,7 +88,7 @@ const { urlIdMap, urls, links } = makePageLinkInfo(pages);
 const linkResult = [];
 urls.forEach((fromUrl, index) => {
   links[index].forEach((toUrl) => {
-    linkResult.push(`Link from ${fromUrl} to ${toUrl}\n`);
+    linkResult.push(`Link from ${fromUrl} to ${toUrl}`);
   });
 });
 const edges = makeGraph(urlIdMap, urls, links);
@@ -98,16 +98,20 @@ for (let i = 0; i < urlPairs.length; i += 2) {
   const start = urlPairs[i];
   const end = urlPairs[i + 1];
   if (canSurf(urlIdMap.get(start), urlIdMap.get(end), edges)) {
-    surfResult.push(`Can surf from ${start} to ${end}.\n`);
+    surfResult.push(`Can surf from ${start} to ${end}.`);
   } else {
-    surfResult.push(`Can't surf from ${start} to ${end}.\n`);
+    surfResult.push(`Can't surf from ${start} to ${end}.`);
   }
 }
 
 // output
 const result = [];
-result.push(linkResult.join(''));
-result.push('\n');
-result.push(surfResult.join(''));
+if (urls.length > 0 && linkResult.length > 0) {
+  result.push(linkResult.join('\n'));
+  if (surfResult.length > 0) result.push('\n\n');
+}
+if (urls.length > 0 && surfResult.length > 0) {
+  result.push(surfResult.join('\n'));
+}
 
 console.log(result.join(''));
