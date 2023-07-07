@@ -14,6 +14,7 @@
         "max-classes-per-file": ["error", 10],
         "no-console": "off",
         "no-shadow":"off",
-        "lines-between-class-members": "off"
+        "lines-between-class-members": "off",
+        "prefer-destructuring": "off"
     }
 }
