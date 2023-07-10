@@ -10,7 +10,7 @@
         "ecmaVersion": 2022
     },
     "rules": {
-        "linebreak-style": ["error", "windows"],
+        "linebreak-style": 0,
         "max-classes-per-file": ["error", 10],
         "no-console": "off",
         "no-shadow":"off",
