@@ -18,6 +18,7 @@
         "no-console": "off",
         "no-shadow":"off",
         "lines-between-class-members": "off",
-        "prefer-destructuring": "off"
+        "prefer-destructuring": "off",
+        "no-continue": "off"
     }
 }
