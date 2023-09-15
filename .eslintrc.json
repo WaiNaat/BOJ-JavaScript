@@ -19,6 +19,7 @@
         "no-shadow":"off",
         "lines-between-class-members": "off",
         "prefer-destructuring": "off",
-        "no-continue": "off"
+        "no-continue": "off",
+        "no-restricted-syntax": "off"
     }
 }
