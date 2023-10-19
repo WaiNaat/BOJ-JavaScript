@@ -35,3 +35,7 @@ CompareFn 반드시 제대로 만들어서 넣을 것. 안 넣으면 string 사�
 ## function return
 가능하면 아무것도 반환하지 않는 게 빠르다.   
 특히 여러 값 반환한다고 `return [a, b, c];` 이렇게 할 거면 그냥 전역변수를 이용해서 처리하자.
+
+## Array.sort에 넣는 compareFn
+
+반환값은 boolean이 아니라 양수, 0, 음수여야 해!!!!!!!!!!!!!!!!!
