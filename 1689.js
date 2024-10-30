@@ -12,7 +12,7 @@
 5. 반복
  */
 const INPUT_FILE = process.platform === 'linux' ? '/dev/stdin' : './input';
-const [[length], ...lines] = require('fs')
+const [, ...lines] = require('fs')
   .readFileSync(INPUT_FILE)
   .toString()
   .trim()
